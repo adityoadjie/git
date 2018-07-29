@@ -31,12 +31,12 @@ Ketika mengevaluasi workflow pada tim, hal palinng penting adalah mempertimbangk
 ## Centralized Workflow
 adalah workflow yang bagus untuk tim transisi dari SVN. Seperti subversion, Centralized Workflow menggunakan repositori sentral yang berperan sebagai pintu masuk tunggal untuk semua perubahan pada proyek. Development branch disebut master dan semua perubahan di-commit-kan pada branch ini. Workflow ini tidak membutuhkan branch lain selain master.
 
-gambar5
+**![alt text](pictures/gambar5.jpg)**
 
 ## Membuat Central Repository
 Pertama, seseorang harus membuat repositori sentral pada server. Apabila project baru, maka dapat membuat repository kosong, bila tidak harus mengimport Git atau SVN repository yang sudah ada. Central repository harus selalu merupakan repository yang tidak memiliki working directory, yang bisa dibuat dengan:
 
-'ssh user@host git init --bare /path/to/repo.git'
+`ssh user@host git init --bare /path/to/repo.git`
 
 ## Clone Central Repository
 Selanjutnya, tiap developer membuat local copy dari keseluruhan project dengan menggunakan git clone command:
@@ -62,4 +62,4 @@ perintah di atas akan mem-push perubahan yang telah dicommit ke central reposito
 ## Managing Conflicts
 Central repository merepresentasikan project official, sehingga commit historinya adalah hal penting. Apabila local commit developer berbeda dengan central repository, Git akan menolah push karena akan meng-overwrite commit official.
 
-gambar7
+**![alt text](pictures/gambar7.jpg)**
