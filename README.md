@@ -22,3 +22,18 @@ Berikut ini adalah gambaran proses dimana semua segmen dikombinasikan
 **![alt text](pictures/gambar4.jpg)**
 
 # Git Workflow: Team Developer
+
+Ketika mengevaluasi workflow pada tim, hal palinng penting adalah mempertimbangkan sifat tim. Kita ingin workflow meningkatkan efektifitas dan tidak membebani sehingga membatasi produktivitas. Beberapa hal untuk dipertimbangkan ketika mengevaluasi git workflow adalah:
+* kesesuaian workflow dengan skala besarnya tim
+* kemudahan memperbaiki kesalahan dan error pada workflow
+* apakah workflow menambahkan cognitive overhead pada tim
+
+## Centralized Workflow
+adalah workflow yang bagus untuk tim transisi dari SVN. Seperti subversion, Centralized Workflow menggunakan repositori sentral yang berperan sebagai pintu masuk tunggal untuk semua perubahan pada proyek. Development branch disebut master dan semua perubahan di-commit-kan pada branch ini. Workflow ini tidak membutuhkan branch lain selain master.
+
+gambar5
+
+## Membuat Central Repository
+Pertama, seseorang harus membuat repositori sentral pada server. Apabila project baru, maka dapat membuat repository kosong, bila tidak harus mengimport Git atau SVN repository yang sudah ada. Central repository harus selalu merupakan repository yang tidak memiliki working directory, yang bisa dibuat dengan:
+
+'ssh user@host git init --bare /path/to/repo.git'
