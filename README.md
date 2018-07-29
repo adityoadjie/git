@@ -36,4 +36,4 @@ gambar5
 ## Membuat Central Repository
 Pertama, seseorang harus membuat repositori sentral pada server. Apabila project baru, maka dapat membuat repository kosong, bila tidak harus mengimport Git atau SVN repository yang sudah ada. Central repository harus selalu merupakan repository yang tidak memiliki working directory, yang bisa dibuat dengan:
 
-  ssh user@host git init --bare /path/to/repo.git
+`ssh user@host git init --bare /path/to/repo.git`
