@@ -1,4 +1,4 @@
-## Git work flow Single Developer
+# Git Workflow: Single Developer
 
 Untuk melakukan development secara solo, workflow dibagi menjadi 3 bagian utama:
 * Master dan origin (remote)
@@ -20,3 +20,5 @@ branch feature merepresentasikan penambahan major dalam project, seperti revamp 
 Berikut ini adalah gambaran proses dimana semua segmen dikombinasikan
 
 **![alt text](pictures/gambar4.jpg)**
+
+# Git Workflow: Team Developer
