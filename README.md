@@ -48,9 +48,9 @@ Ketika meng-clone repository, Git secara otomatis menambahkan shortcut yang dise
 ## Membuat Perubahan dan Commit
 Setelah repository di-clone secara local, developer dapat membuat perubahan menggunakan proses Git standard: edit, stage, dan commit. Apabila tidak familiar dengan area staging, ini adalah cara untuk mempersiapkan commit tanpa memasukkan setiap perubahan ke dalam working directory. Cara ini membuat kita dapat membuat commit dengan fokus yang tinggi, walaupun membuat banyak perubahan.
 
-`git status # View the state of the repo`
-`git add <some-file> # Stage a file`
-`git commit # Commit a file</some-file>`
+`git status # View the state of the repo`<br/>
+`git add <some-file> # Stage a file`<br/>
+`git commit # Commit a file</some-file>`<br/>
 
 ## Push Commit Baru ke Central Repository
 Setelah repository local sudah di-commit perubahannya, perubahan itu perlu di-push untuk dibagikan kepada developer lain yang terlibat dalam proyek.
