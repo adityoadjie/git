@@ -36,4 +36,30 @@ gambar5
 ## Membuat Central Repository
 Pertama, seseorang harus membuat repositori sentral pada server. Apabila project baru, maka dapat membuat repository kosong, bila tidak harus mengimport Git atau SVN repository yang sudah ada. Central repository harus selalu merupakan repository yang tidak memiliki working directory, yang bisa dibuat dengan:
 
-`ssh user@host git init --bare /path/to/repo.git`
+'ssh user@host git init --bare /path/to/repo.git'
+
+## Clone Central Repository
+Selanjutnya, tiap developer membuat local copy dari keseluruhan project dengan menggunakan git clone command:
+
+`git clone ssh://user@host/path/to/repo.git`
+
+Ketika meng-clone repository, Git secara otomatis menambahkan shortcut yang disebut origin yang menunjuk ke repository "parent".
+
+## Membuat Perubahan dan Commit
+Setelah repository di-clone secara local, developer dapat membuat perubahan menggunakan proses Git standard: edit, stage, dan commit. Apabila tidak familiar dengan area staging, ini adalah cara untuk mempersiapkan commit tanpa memasukkan setiap perubahan ke dalam working directory. Cara ini membuat kita dapat membuat commit dengan fokus yang tinggi, walaupun membuat banyak perubahan.
+
+`git status # View the state of the repo`
+`git add <some-file> # Stage a file`
+`git commit # Commit a file</some-file>`
+
+## Push Commit Baru ke Central Repository
+Setelah repository local sudah di-commit perubahannya, perubahan itu perlu di-push untuk dibagikan kepada developer lain yang terlibat dalam proyek.
+
+`git push origin master`
+
+perintah di atas akan mem-push perubahan yang telah dicommit ke central repository. Ketika mem-push perubahan ke central repository, ada kemungkinan update dari developer lain akan berkonflik dengan apa yang kita push. Dalam situasi ini, git pull perlu dieksekusi paling awal.
+
+## Managing Conflicts
+Central repository merepresentasikan project official, sehingga commit historinya adalah hal penting. Apabila local commit developer berbeda dengan central repository, Git akan menolah push karena akan meng-overwrite commit official.
+
+gambar7
